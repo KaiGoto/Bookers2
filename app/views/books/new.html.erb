@@ -1,0 +1,10 @@
+<div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+<h2>New Book</h2>
+<%= form_with model: @book, local:true do |f| %>
+
+  <h5>Title</h5>
+  <%= f.text_field :title %>
+  <h5>Opinion</h5>
+  <%= f.text_area :body %>
+  <p> <%= f.submit 'Create Book' %></p>
+<% end %>
