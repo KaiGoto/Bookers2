@@ -26,3 +26,4 @@ hoge
 hoge
 # Bookers2
 hoge
+BOOKERS2
