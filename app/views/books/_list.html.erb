@@ -17,7 +17,7 @@
         </tbody>
       </table>
       <%# if user.id == current_user.id %>
-        <%= link_to "", edit_user_path(user), class:"btn btn-outline-secondary btn-block fas fa-user-cog" %>
+        <%= link_to "", edit_user_path(user.id), class:"btn btn-outline-secondary btn-block fas fa-user-cog" %>
       <%# else %>
        <%#= link_to "", user_path(current_user), class:"btn btn-outline-secondary btn-block fas fa-user-cog" %>
       <%# end %>
