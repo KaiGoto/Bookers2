@@ -1,4 +1,5 @@
-<div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+<div class='row'>
+  <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
 
       <h2>User Info</h2>
       <% if @user.errors.any? %>
@@ -17,5 +18,6 @@
         <p><%= f.text_field :introduction %></p>
         <p><%= f.submit "Update User" %></p>
       <% end %>
+  </div>
 </div>
       

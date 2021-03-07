@@ -1,6 +1,7 @@
-<div class='col-md-3'>
-    <%= render 'books/list', user: @book_show.user, book: @book %>
-</div>
+<div class='row'>
+  <div class='col-md-3'>
+      <%= render 'books/list', user: @book_show.user, book: @book %>
+  </div>
     <div class='col-md-8 offset-md-1'>
       <h2>Book detail</h2>
       <table class='table table-hover table-inverse'>
@@ -85,3 +86,4 @@
              <% end %>
       </div>
     </div>
+</div>

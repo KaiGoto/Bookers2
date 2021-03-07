@@ -1,2 +1,60 @@
-<h1>Search#search</h1>
-<p>Find me in app/views/search/search.html.erb</p>
+<div class='row'>
+  <div class='col-md-12'>
+    <h2>
+      <%= @model %> search for
+      "<%= @content %>"
+    </h2>
+    <table class='table table-hover table-inverse'>
+      <thead>
+        <tr>
+          <% if @model == "user" %>
+            <th></th>
+            <th>Name</th>
+          <% else %>
+            <th></th>
+            <th>Title</th>
+            <th>Opinion</th>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <% if @model == "user" %>
+        <% @datas.each do |data| %>
+        <tr>
+          <th>
+            <%= attachment_image_tag data, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+          </th>
+          <th>
+            <%= data.name %>
+          </th>
+          <th>
+            フォロー数<%= data.followed.count %>
+          </th>
+          <th>
+            フォロワー数<%= data.follower.count %>
+          </th>
+          <th>
+            <%= link_to "Show",user_path(data.id) %>
+          </th>
+           <% end %>
+           <% end %>
+        </tr>
+          <% if @model == "book" %>
+          <% @datas.each do |data| %>
+        <tr>
+          <th>
+            <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+          </th>
+          <th>
+            <%= data.title %>
+          </th>
+          <th>
+             <%= data.body %>
+          </th>
+        </tr>
+        <% end %>
+        <% end %>
+        </tbody>
+    </table>
+  </div>
+</div>
